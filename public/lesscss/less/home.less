@@ -1,0 +1,141 @@
+
+.responsive(@maxWidth; @rules) {
+    @media only screen and (max-width: @maxWidth) {
+        @rules();
+    }
+}
+
+.clearfix{
+	&:after{
+	    content: ".";
+	    visibility: hidden;
+	    display: block;
+	    clear: both;
+	    height: 0;
+	    font-size: 0; 
+	}
+}
+
+body{
+	background: url('../../images/bg.jpg') repeat;
+}
+.wrapper-content{
+	.inner-wrapper-content{
+		display: block;
+		margin: 0px auto;
+		width: 90%;
+		padding-top: 20px;
+		margin-top: 12px;
+		background: url('../../images/separator.jpg') repeat-x;
+		.clearfix();
+		.page-content{
+			padding: 0px;
+			.inner-page-content{
+				.feature-post{
+					header{
+						display: block;
+						height: 42px;
+						background-color: #c40397;
+						border-top-left-radius: 10px;
+						border-top-right-radius: 10px;
+						h3{
+							height: 42px;
+							display: block;
+							float: left;
+							color: white;
+							margin : 0px;
+							padding-left: 17px;
+    						padding-top: 9px;
+						}
+						.wrap-read-more{
+							display: block;
+							height: 42px;
+							float: right;
+							width: 150px;
+							a{
+								color: white;
+								text-decoration: none;
+								font-family: "Varela Round";
+  								font-size: 20px;
+							    margin-top: 5px;
+							    display: block;
+
+							}
+						}
+					}
+				
+					.list-item{
+						display: block;
+						width: 100%;
+						background-color: #ABABAA;
+						&:after {
+						    content: ".";
+						    visibility: hidden;
+						    display: block;
+						    clear: both;
+						    height: 0;
+						    font-size: 0; 
+						}
+						.wrap-article{
+							display: block;
+							float : left;
+							width: 33.33%;
+							// margin-right: 11px;
+							margin-bottom: 11px;
+							.responsive(768px, {
+						        width: 50%;
+						    });
+								article{
+									display: block;
+									margin : 0px auto;
+									width: 95%;
+									background-color: white;
+									
+									.image-wrapper{
+										display: block;
+										width: 100%;
+										img{
+											width: 100%;
+											height: 150px;
+										}
+									}
+									h4{
+										font-family: "Open Sans";
+										
+									}
+									.description{
+										font-family: "Open Sans";
+									}
+									.wrap-footer-post{
+										display: block;
+										width: 100%;
+										border-top: 2px solid #c9e83f;
+										.clearfix();
+										a.read-more{
+											font-family: "Varela Round";
+											padding : 3px;
+											border-radius: 5px;
+											background-color: #5b5b5b;
+											color : white;
+											float: right;
+										    margin-right: 7px;
+										    margin-bottom: 5px;
+										    margin-top: 5px;
+										}
+									}
+									
+								}
+						}
+					
+					}
+				}
+				.food-post{
+					.feature-post();
+				}
+				.landscape-post{
+					.feature-post();
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,147 @@
+div#header div.inner-header div.cross-bar-top {
+  display: block;
+  width: 100%;
+  height: 55px;
+  background-color: #4F4F4F;
+}
+div#header div.inner-header div.logo {
+  display: block;
+  width: 100%;
+}
+div#header div.inner-header div.logo div.inner-logo {
+  display: block;
+  margin: 0px auto;
+  width: 90%;
+  height: 175px;
+  background: url('../../images/bn-travel-category.jpg') no-repeat;
+  opacity: 0.8;
+  filter: alpha(opacity=40);
+  /* For IE8 and earlier */
+}
+div#header div.inner-header div.logo div.inner-logo:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  clear: both;
+  height: 0;
+  font-size: 0;
+}
+div#header div.inner-header div.logo div.inner-logo div.wrapper-logo {
+  display: block;
+  float: left;
+  height: 175px;
+}
+div#header div.inner-header div.logo div.inner-logo div.wrapper-logo h2 {
+  display: block;
+  margin-top: 60px;
+  margin-left: 33px;
+}
+div#header div.inner-header div.logo div.inner-logo div.wrapper-button {
+  display: block;
+  height: 175px;
+  float: left;
+  padding-left: 58px;
+  padding-top: 53px;
+}
+div#header div.inner-header div.logo div.inner-logo div.wrapper-button a {
+  background: #f09f3c;
+  background-image: -webkit-linear-gradient(top, #fabd52, #cf881d);
+  background-image: -moz-linear-gradient(top, #fabd52, #cf881d);
+  background-image: -ms-linear-gradient(top, #fabd52, #cf881d);
+  background-image: -o-linear-gradient(top, #fabd52, #cf881d);
+  background-image: linear-gradient(to bottom, #fabd52, #cf881d);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+div#header div.inner-header div.logo div.inner-logo div.wrapper-button a:hover {
+  background: #f0a74d;
+  text-decoration: none;
+}
+div#header div.inner-header div.menu {
+  display: block;
+  width: 100%;
+}
+div#header div.inner-header div.menu div.inner-menu {
+  display: block;
+  margin: 0px auto;
+  width: 85%;
+  height: 45px;
+}
+div#header div.inner-header div.menu div.inner-menu nav {
+  display: block;
+  height: 45px;
+  width: 100%;
+  background-color: #43891e;
+}
+div#header div.inner-header div.menu div.inner-menu nav > ul {
+  display: block;
+  height: 45px;
+  width: 100%;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  border-radius: 5px;
+}
+div#header div.inner-header div.menu div.inner-menu nav > ul > li {
+  display: block;
+  float: left;
+  list-style: none;
+  padding: 10px;
+  width: 16.66%;
+  height: 45px;
+  min-width: 100px;
+  position: relative;
+}
+div#header div.inner-header div.menu div.inner-menu nav > ul > li > a {
+  font: 18px/48px 'LeagueGothicRegular', Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.4em;
+  text-decoration: none;
+  text-align: center;
+  color: #FFFFFF;
+}
+div#header div.inner-header div.menu div.inner-menu nav > ul > li:hover {
+  background-color: #336b15;
+}
+div#header div.inner-header div.menu div.inner-menu nav > ul > li:hover > ul {
+  display: block;
+}
+div#header div.inner-header div.menu div.inner-menu nav > ul > li > ul {
+  display: none;
+  position: absolute;
+  left: 0px;
+  top: 45px;
+  width: 215px;
+  padding-left: 0px;
+  z-index: 1000;
+}
+div#header div.inner-header div.menu div.inner-menu nav > ul > li > ul > li {
+  display: block;
+  width: 100%;
+  list-style: none;
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: #43891e;
+}
+div#header div.inner-header div.menu div.inner-menu nav > ul > li > ul > li > a {
+  font-family: arial, helvetica, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.4em;
+  text-decoration: none;
+  text-align: center;
+  color: #FFFFFF;
+}
+div#header div.inner-header div.menu div.inner-menu nav .wrap-menu-mobile select#menu-mobile {
+  width: 90%;
+  display: block;
+  margin: 0px auto;
+  height: 38px;
+}

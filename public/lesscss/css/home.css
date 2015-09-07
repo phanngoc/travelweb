@@ -1,0 +1,324 @@
+.clearfix:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  clear: both;
+  height: 0;
+  font-size: 0;
+}
+body {
+  background: url('../../images/bg.jpg') repeat;
+}
+.wrapper-content .inner-wrapper-content {
+  display: block;
+  margin: 0px auto;
+  width: 90%;
+  padding-top: 20px;
+  margin-top: 12px;
+  background: url('../../images/separator.jpg') repeat-x;
+}
+.wrapper-content .inner-wrapper-content:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  clear: both;
+  height: 0;
+  font-size: 0;
+}
+.wrapper-content .inner-wrapper-content .page-content {
+  padding: 0px;
+}
+.wrapper-content .inner-wrapper-content .page-content .inner-page-content .feature-post header {
+  display: block;
+  height: 42px;
+  background-color: #c40397;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.wrapper-content .inner-wrapper-content .page-content .inner-page-content .feature-post header h3 {
+  height: 42px;
+  display: block;
+  float: left;
+  color: white;
+  margin: 0px;
+  padding-left: 17px;
+  padding-top: 9px;
+}
+.wrapper-content .inner-wrapper-content .page-content .inner-page-content .feature-post header .wrap-read-more {
+  display: block;
+  height: 42px;
+  float: right;
+  width: 150px;
+}
+.wrapper-content .inner-wrapper-content .page-content .inner-page-content .feature-post header .wrap-read-more a {
+  color: white;
+  text-decoration: none;
+  font-family: "Varela Round";
+  font-size: 20px;
+  margin-top: 5px;
+  display: block;
+}
+.wrapper-content .inner-wrapper-content .page-content .inner-page-content .feature-post .list-item {
+  display: block;
+  width: 100%;
+  background-color: #ABABAA;
+}
+.wrapper-content .inner-wrapper-content .page-content .inner-page-content .feature-post .list-item:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  clear: both;
+  height: 0;
+  font-size: 0;
+}
+.wrapper-content .inner-wrapper-content .page-content .inner-page-content .feature-post .list-item .wrap-article {
+  display: block;
+  float: left;
+  width: 33.33%;
+  margin-bottom: 11px;
+}
+@media only screen and (max-width: 768px) {
+  .wrapper-content .inner-wrapper-content .page-content .inner-page-content .feature-post .list-item .wrap-article {
+    width: 50%;
+  }
+}
+.wrapper-content .inner-wrapper-content .page-content .inner-page-content .feature-post .list-item .wrap-article article {
+  display: block;
+  margin: 0px auto;
+  width: 95%;
+  background-color: white;
+}
+.wrapper-content .inner-wrapper-content .page-content .inner-page-content .feature-post .list-item .wrap-article article .image-wrapper {
+  display: block;
+  width: 100%;
+}
+.wrapper-content .inner-wrapper-content .page-content .inner-page-content .feature-post .list-item .wrap-article article .image-wrapper img {
+  width: 100%;
+  height: 150px;
+}
+.wrapper-content .inner-wrapper-content .page-content .inner-page-content .feature-post .list-item .wrap-article article h4 {
+  font-family: "Open Sans";
+}
+.wrapper-content .inner-wrapper-content .page-content .inner-page-content .feature-post .list-item .wrap-article article .description {
+  font-family: "Open Sans";
+}
+.wrapper-content .inner-wrapper-content .page-content .inner-page-content .feature-post .list-item .wrap-article article .wrap-footer-post {
+  display: block;
+  width: 100%;
+  border-top: 2px solid #c9e83f;
+}
+.wrapper-content .inner-wrapper-content .page-content .inner-page-content .feature-post .list-item .wrap-article article .wrap-footer-post:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  clear: both;
+  height: 0;
+  font-size: 0;
+}
+.wrapper-content .inner-wrapper-content .page-content .inner-page-content .feature-post .list-item .wrap-article article .wrap-footer-post a.read-more {
+  font-family: "Varela Round";
+  padding: 3px;
+  border-radius: 5px;
+  background-color: #5b5b5b;
+  color: white;
+  float: right;
+  margin-right: 7px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+.wrapper-content .inner-wrapper-content .page-content .inner-page-content .food-post header {
+  display: block;
+  height: 42px;
+  background-color: #c40397;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.wrapper-content .inner-wrapper-content .page-content .inner-page-content .food-post header h3 {
+  height: 42px;
+  display: block;
+  float: left;
+  color: white;
+  margin: 0px;
+  padding-left: 17px;
+  padding-top: 9px;
+}
+.wrapper-content .inner-wrapper-content .page-content .inner-page-content .food-post header .wrap-read-more {
+  display: block;
+  height: 42px;
+  float: right;
+  width: 150px;
+}
+.wrapper-content .inner-wrapper-content .page-content .inner-page-content .food-post header .wrap-read-more a {
+  color: white;
+  text-decoration: none;
+  font-family: "Varela Round";
+  font-size: 20px;
+  margin-top: 5px;
+  display: block;
+}
+.wrapper-content .inner-wrapper-content .page-content .inner-page-content .food-post .list-item {
+  display: block;
+  width: 100%;
+  background-color: #ABABAA;
+}
+.wrapper-content .inner-wrapper-content .page-content .inner-page-content .food-post .list-item:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  clear: both;
+  height: 0;
+  font-size: 0;
+}
+.wrapper-content .inner-wrapper-content .page-content .inner-page-content .food-post .list-item .wrap-article {
+  display: block;
+  float: left;
+  width: 33.33%;
+  margin-bottom: 11px;
+}
+@media only screen and (max-width: 768px) {
+  .wrapper-content .inner-wrapper-content .page-content .inner-page-content .food-post .list-item .wrap-article {
+    width: 50%;
+  }
+}
+.wrapper-content .inner-wrapper-content .page-content .inner-page-content .food-post .list-item .wrap-article article {
+  display: block;
+  margin: 0px auto;
+  width: 95%;
+  background-color: white;
+}
+.wrapper-content .inner-wrapper-content .page-content .inner-page-content .food-post .list-item .wrap-article article .image-wrapper {
+  display: block;
+  width: 100%;
+}
+.wrapper-content .inner-wrapper-content .page-content .inner-page-content .food-post .list-item .wrap-article article .image-wrapper img {
+  width: 100%;
+  height: 150px;
+}
+.wrapper-content .inner-wrapper-content .page-content .inner-page-content .food-post .list-item .wrap-article article h4 {
+  font-family: "Open Sans";
+}
+.wrapper-content .inner-wrapper-content .page-content .inner-page-content .food-post .list-item .wrap-article article .description {
+  font-family: "Open Sans";
+}
+.wrapper-content .inner-wrapper-content .page-content .inner-page-content .food-post .list-item .wrap-article article .wrap-footer-post {
+  display: block;
+  width: 100%;
+  border-top: 2px solid #c9e83f;
+}
+.wrapper-content .inner-wrapper-content .page-content .inner-page-content .food-post .list-item .wrap-article article .wrap-footer-post:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  clear: both;
+  height: 0;
+  font-size: 0;
+}
+.wrapper-content .inner-wrapper-content .page-content .inner-page-content .food-post .list-item .wrap-article article .wrap-footer-post a.read-more {
+  font-family: "Varela Round";
+  padding: 3px;
+  border-radius: 5px;
+  background-color: #5b5b5b;
+  color: white;
+  float: right;
+  margin-right: 7px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+.wrapper-content .inner-wrapper-content .page-content .inner-page-content .landscape-post header {
+  display: block;
+  height: 42px;
+  background-color: #c40397;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.wrapper-content .inner-wrapper-content .page-content .inner-page-content .landscape-post header h3 {
+  height: 42px;
+  display: block;
+  float: left;
+  color: white;
+  margin: 0px;
+  padding-left: 17px;
+  padding-top: 9px;
+}
+.wrapper-content .inner-wrapper-content .page-content .inner-page-content .landscape-post header .wrap-read-more {
+  display: block;
+  height: 42px;
+  float: right;
+  width: 150px;
+}
+.wrapper-content .inner-wrapper-content .page-content .inner-page-content .landscape-post header .wrap-read-more a {
+  color: white;
+  text-decoration: none;
+  font-family: "Varela Round";
+  font-size: 20px;
+  margin-top: 5px;
+  display: block;
+}
+.wrapper-content .inner-wrapper-content .page-content .inner-page-content .landscape-post .list-item {
+  display: block;
+  width: 100%;
+  background-color: #ABABAA;
+}
+.wrapper-content .inner-wrapper-content .page-content .inner-page-content .landscape-post .list-item:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  clear: both;
+  height: 0;
+  font-size: 0;
+}
+.wrapper-content .inner-wrapper-content .page-content .inner-page-content .landscape-post .list-item .wrap-article {
+  display: block;
+  float: left;
+  width: 33.33%;
+  margin-bottom: 11px;
+}
+@media only screen and (max-width: 768px) {
+  .wrapper-content .inner-wrapper-content .page-content .inner-page-content .landscape-post .list-item .wrap-article {
+    width: 50%;
+  }
+}
+.wrapper-content .inner-wrapper-content .page-content .inner-page-content .landscape-post .list-item .wrap-article article {
+  display: block;
+  margin: 0px auto;
+  width: 95%;
+  background-color: white;
+}
+.wrapper-content .inner-wrapper-content .page-content .inner-page-content .landscape-post .list-item .wrap-article article .image-wrapper {
+  display: block;
+  width: 100%;
+}
+.wrapper-content .inner-wrapper-content .page-content .inner-page-content .landscape-post .list-item .wrap-article article .image-wrapper img {
+  width: 100%;
+  height: 150px;
+}
+.wrapper-content .inner-wrapper-content .page-content .inner-page-content .landscape-post .list-item .wrap-article article h4 {
+  font-family: "Open Sans";
+}
+.wrapper-content .inner-wrapper-content .page-content .inner-page-content .landscape-post .list-item .wrap-article article .description {
+  font-family: "Open Sans";
+}
+.wrapper-content .inner-wrapper-content .page-content .inner-page-content .landscape-post .list-item .wrap-article article .wrap-footer-post {
+  display: block;
+  width: 100%;
+  border-top: 2px solid #c9e83f;
+}
+.wrapper-content .inner-wrapper-content .page-content .inner-page-content .landscape-post .list-item .wrap-article article .wrap-footer-post:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  clear: both;
+  height: 0;
+  font-size: 0;
+}
+.wrapper-content .inner-wrapper-content .page-content .inner-page-content .landscape-post .list-item .wrap-article article .wrap-footer-post a.read-more {
+  font-family: "Varela Round";
+  padding: 3px;
+  border-radius: 5px;
+  background-color: #5b5b5b;
+  color: white;
+  float: right;
+  margin-right: 7px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
