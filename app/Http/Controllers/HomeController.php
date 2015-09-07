@@ -8,6 +8,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Models\Post;
 use App\Models\Comment;
+use App\Models\Tour;
 
 class HomeController extends Controller
 {
@@ -22,7 +23,9 @@ class HomeController extends Controller
         $postfoods = Post::getPostFood();
         $postlandscapes = Post::getPostLandscape();
         $comments = Comment::getLastComment();
-        return view('home.home',compact('postfeatures','postfoods','postlandscapes','comments'));
+        $tours = Tour::getFeatureTour();
+      
+        return view('home.home',compact('postfeatures','postfoods','postlandscapes','comments','tours'));
     }
 
     /**

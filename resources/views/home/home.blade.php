@@ -117,9 +117,11 @@
                       ?>
                         <li>
                           <div class="inner-item">
-                            <div class="wrap-avatar">
-                              <img src="{{'avatars/'.$value->avatar}}" alt="">
-                            </div>
+                              <div class="wrap-avatar">
+                                <img src="{{Asset('avatars/'.$value->avatar)}}" alt="">
+                              </div>
+                              {{$value->comment}}
+                              <a href="javascript:" class="link">{{$value->title}}</a>
                           </div>
                         </li>
                       <?php
@@ -128,7 +130,36 @@
                 </ul>
               </div>
             </div>
-          </div>
+          </div> <!-- .recent-comment-->
+          <div class="feature-tour">
+            <div class="inner-feature-tour">
+              <div class="wrap-head">
+                <h4>Các tour nổi bật</h4>
+              </div>
+              <div class="wrap-list">
+                <ul>
+                  <?php
+                    foreach ($tours as $key => $value) {
+                      // dd($value->image->link);
+                      ?>
+                        <li>
+                          <div class="inner-item">
+                              <div class="wrap-avatar">
+                                <img src="{{Asset('tours/'.$value->image->link)}}" alt="">
+                              </div>
+                              <div class="title">
+                                <a href="javascript:">{{$value->title}}</a>
+                              </div>
+                              <p class="price">{{$value->price}}</p>  
+                          </div>
+                        </li>
+                      <?php
+                    }
+                  ?>
+                </ul>
+              </div>
+            </div> <!-- .inner-feature-tour -->
+          </div> <!-- .feature-tour -->
         </div>
       </div>
     </div>
