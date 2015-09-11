@@ -1,0 +1,55 @@
+.clearfix:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  clear: both;
+  height: 0;
+  font-size: 0;
+}
+div#footer {
+  display: block;
+  background-color: #efefef;
+  border-top: 2px solid #5b5b5b;
+  padding-top: 11px;
+  margin-top: 18px;
+}
+div#footer div.inner-footer div.footer-left div.inner-footer-left {
+  display: block;
+  margin: 10px auto;
+  width: 60%;
+  color: black;
+  font: 16px/2 "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.75em;
+}
+div#footer div.inner-footer div.footer-left div.inner-footer-left p {
+  text-align: center;
+}
+div#footer div.inner-footer div.footer-left div.inner-footer-left p.phone {
+  font-size: 18px;
+  color: #3e69e0;
+}
+div#footer div.inner-footer div.footer-left div.inner-footer-left h4 {
+  text-align: center;
+}
+div#footer div.inner-footer div.footer-right div.inner-footer-right h4 {
+  text-align: center;
+}
+div#footer div.inner-footer div.footer-right div.inner-footer-right ul {
+  padding-left: 0px;
+  display: block;
+  margin: 0px auto;
+  width: 44%;
+}
+div#footer div.inner-footer div.footer-right div.inner-footer-right ul:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  clear: both;
+  height: 0;
+  font-size: 0;
+}
+div#footer div.inner-footer div.footer-right div.inner-footer-right ul li {
+  list-style: none;
+  display: block;
+  float: left;
+}

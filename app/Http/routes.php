@@ -12,3 +12,9 @@
 */
 
 Route::get('/','HomeController@index');
+Route::get('/cate/{id}/{name}','HomeController@category');
+Route::get('/p/{id}/{more}',['as'=>'detailpost','uses'=>'HomeController@postdetail']);
+Route::post('/p/{id}/{more}',['as'=>'submitCommentPost','uses'=>'HomeController@submitCommentPostDetail']);
+Route::get('/tour',['as'=>'tour','uses'=>'HomeController@tour']);
+
+Route::get('testmid', ['middleware' => 'mymiddleware:param1,param2','uses' => 'MyController@index']);

@@ -1,3 +1,35 @@
-.sds h2 {
-  background-color: red;
+.clearfix:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  clear: both;
+  height: 0;
+  font-size: 0;
+}
+.wrapper-content:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  clear: both;
+  height: 0;
+  font-size: 0;
+}
+.wrapper-content .inner-wrapper-content {
+  display: block;
+  margin: 0px auto;
+  width: 90%;
+  padding-top: 20px;
+  margin-top: 12px;
+  background: url('../../images/separator.jpg') repeat-x;
+}
+.wrapper-content .inner-wrapper-content:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  clear: both;
+  height: 0;
+  font-size: 0;
+}
+body {
+  background: url('../../images/bg.jpg') repeat;
 }

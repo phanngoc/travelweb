@@ -29,7 +29,7 @@ class Tour extends Model {
 	 */
 	public static function getFeatureTour()
 	{
-		$tours = DB::table('tours')->where('is_featured',1)->take(5)->get();
+		$tours = DB::table('tours')->where('is_featured',1)->take(6)->get();
 		foreach ($tours as $key => $value) {
 			$image = TourImage::where('tour_id',$value->id)->first();
 			$tours[$key]->image = $image;
@@ -37,4 +37,18 @@ class Tour extends Model {
 		return $tours;	
 	}
 	
+	/**
+	 * [getNewTour description]
+	 * @return [type] [description]
+	 */
+	public static function getNewTour()
+	{
+		$tours = DB::table('tours')->orderBy('departure_time', 'desc')->take(6)->get();
+
+		foreach ($tours as $key => $value) {
+			$image = TourImage::where('tour_id',$value->id)->first();
+			$tours[$key]->image = $image;
+		}
+		return $tours;	
+	}
 }

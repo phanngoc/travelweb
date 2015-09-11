@@ -10,7 +10,7 @@
 					<h2>Du lịch nhanh</h2>
 				</div>
 				<div class="wrapper-button">
-					<a href="#" class="set-tour btn">Đặt tour</a>
+					<a href="{{ route('tour') }}" class="set-tour btn">Đặt tour</a>
 				</div>
 			</div>
 		</div>

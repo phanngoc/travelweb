@@ -1,5 +1,32 @@
-.sds{
-	h2{
-		background-color: red;
+.responsive(@maxWidth; @rules) {
+    @media only screen and (max-width: @maxWidth) {
+        @rules();
+    }
+}
+
+.clearfix{
+	&:after{
+	    content: ".";
+	    visibility: hidden;
+	    display: block;
+	    clear: both;
+	    height: 0;
+	    font-size: 0; 
 	}
+}
+.wrapper-content{
+	.clearfix();
+	.inner-wrapper-content{
+		.clearfix();
+		display: block;
+		margin: 0px auto;
+		width: 90%;
+		padding-top: 20px;
+		margin-top: 12px;
+		background: url('../../images/separator.jpg') repeat-x;
+	}
+}	
+
+body{
+	background: url('../../images/bg.jpg') repeat;
 }

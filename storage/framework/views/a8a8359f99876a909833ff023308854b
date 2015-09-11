@@ -1,0 +1,168 @@
+<?php $__env->startSection('head.title'); ?>
+  Trang web du lịch chính thức Việt Nam.
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('body.content'); ?>
+  <link rel="stylesheet" href="<?php echo e(Asset('lesscss/css/post-detail.css')); ?>" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <div class="wrapper-content">
+    <div class="inner-wrapper-content">
+      <div class="page-content col-md-9">
+        <div class="inner-page-content">
+          <div class="post-detail">
+            <header>
+              <h3><?php echo e($post->title); ?></h3>
+            </header>
+            <div class="info">
+              <p class="post-menu">
+                <span class="post-cate">Trong mục :<a href="javascript:"><?php echo e($post->category->name); ?></a></span>
+                <span class="post-date"><i class="fa fa-calendar-times-o"></i><?php echo e($post->date); ?></span>
+                <span class="post-comment"></span>
+              
+              </p>
+            </div>
+            <div class="content">
+                <div class="inner-content">
+                  <?php echo e($post->content); ?>
+
+                </div>
+            </div>
+            <div class="wrap-tag">
+              <span class="item-tag"></span>
+            </div>
+            <div class="wrap-comment">
+              <div class="inner-wrap-comment">
+                <div class="form-comment">
+                  <div class="wrap-head">
+                    <h3>Bình luận</h3>
+                  </div>
+                  <?php
+                    // $path = parse_url($url, PHP_URL_PATH);
+                    // $pathFragments = explode('/', $path);
+                    // $end = end($pathFragments);
+                  ?>
+                  <form action="<?php echo e(route('submitCommentPost',array('id'=>$post->id,'more'=>Request::segment(3)))); ?>" method="POST">
+                  <input type="hidden" name="_token" value="<?php echo e(csrf_token()); ?>">
+                    <div class="form-group">
+                      <label for="fullname">Fullname <span style="color:red;">(*)</span></label>
+                      <input type="text" class="form-control" name="fullname" value="<?php echo e(old('fullname')); ?>" />
+                      <?php echo e($errors->post->first('fullname')); ?>
+
+                    </div>
+                    <div class="form-group">
+                      <label for="email">Email <span style="color:red;">(*)</span></label>
+                      <input type="text" class="form-control" name="email" value="<?php echo e(old('email')); ?>"/>
+                      <?php echo e($errors->post->first('email')); ?>
+
+                    </div>
+                    <div class="form-group">
+                      <label for="comment">Comment <span style="color:red;">(*)</span></label>
+                      <textarea type="text" class="form-control" name="comment"><?php echo e(old('comment')); ?></textarea>
+                      <?php echo e($errors->post->first('comment')); ?>
+
+                    </div>
+                    <button type="submit" class="btn btn-primary">Gửi</button>
+                  </form>
+               
+                  <div class="list-comment">
+                    <div class="inner-list-comment">
+                      <ul>
+                        <?php
+                          foreach ($commentposts as $key => $value) {
+                            ?>  
+                            <li>
+                              <div class="item-comment">
+                                <div class="wrap-avatar">
+                                  <img src="<?php echo e(Asset('avatars/'.$value->user->avatar)); ?>" alt="">
+                                </div>
+                                <div class="info">
+                                  <span class="post-date"><i class="fa fa-calendar-times-o"></i><?php echo e($value->date); ?></span>
+                                </div>
+                                <div class="comment">
+                                  <?php echo e($value->comment); ?>
+
+                                </div>
+                              </div>
+                            </li>
+                            <?php
+                          }
+                        ?>  
+                      </ul>
+                      
+                    </div>
+                  </div>
+                </div> <!-- .form-comment -->
+              </div> <!-- .inner-wrap-comment -->
+            </div>  <!-- .wrap-comment -->
+           </div> <!-- .post-detail --> 
+        </div> <!-- .inner-page-content -->
+      </div> <!-- .page-content -->
+      <div class="sidebar col-md-3">
+        <div class="inner-sidebar">
+          <div class="feature-post">
+            <div class="inner-feature-post">
+              <div class="wrap-head">
+                <h4>Các bài viết nổi bật</h4>
+              </div>
+              <div class="wrap-list">
+                <ul>
+                  <?php
+                    foreach ($postfeatures as $key => $value) {
+                      ?>
+                        <li>
+                          <div class="inner-item">
+                              <div class="wrap-avatar">
+                                <a href="javascript:"><img src="<?php echo e(Asset('posts/'.$value->image)); ?>" alt=""/></a>
+                              </div>
+                              <div class="title"><a href="javascript:"><?php echo e($value->title); ?></a></div>
+                              <div class="content">
+                              <?php 
+                                $pos = strpos($value->content," ",50);
+                                echo substr($value->content,0,$pos)."..."; 
+                              ?>
+                              </div>
+                          </div>
+                        </li>
+                      <?php
+                    }
+                  ?>
+                </ul>
+              </div>
+            </div>
+          </div> <!-- .recent-comment-->
+          <div class="random-post">
+            <div class="inner-random-post">
+              <div class="wrap-head">
+                <h4>Các bài viết ngẫu nhiên</h4>
+              </div>
+              <div class="wrap-list">
+                <ul>
+                  <?php
+                    foreach ($randomposts as $key => $value) {
+                      ?>
+                        <li>
+                          <div class="inner-item">
+                              <div class="wrap-avatar">
+                                <a href="javascript:"><img src="<?php echo e(Asset('posts/'.$value->image)); ?>" alt=""/></a>
+                              </div>
+                              <div class="title"><a href="javascript:"><?php echo e($value->title); ?></a></div>
+                              <div class="content">
+                              <?php 
+                                $pos = strpos($value->content," ",50);
+                                echo substr($value->content,0,$pos)."..."; 
+                              ?>
+                              </div>
+                          </div>
+                        </li>
+                      <?php
+                    }
+                  ?>
+                </ul>
+              </div>
+            </div> <!-- .inner-random-post -->
+          </div> <!-- .random-post-->
+        </div>
+      </div>
+    </div>
+  </div>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('home.master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
