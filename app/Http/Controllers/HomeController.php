@@ -8,6 +8,8 @@ use App\Models\Post;
 use App\Models\Comment;
 use App\Models\Tour;
 use App\Models\Category;
+use App\Models\Departure;
+use App\Models\Destination;
 use App\User;
 use Validator;
 
@@ -96,14 +98,16 @@ class HomeController extends Controller
     {
         $featuretours = Tour::getFeatureTour();
         foreach ($featuretours as $key => $value) {
-            $featuretours[$key]->periodNature = $this->periodNature($value->period);
+            $featuretours[$key]->periodNature = HomeController::periodNature($value->period);
         }
 
         $newtours = Tour::getNewTour();
         foreach ($newtours as $key => $value) {
-            $newtours[$key]->periodNature = $this->periodNature($value->period);
+            $newtours[$key]->periodNature = HomeController::periodNature($value->period);
         }
-        return view('home.tour',compact('featuretours','newtours'));
+        $destinations = Destination::all();
+        $departures = Departure::all();
+        return view('home.tour',compact('featuretours','newtours','destinations','departures'));
     }
 
     /**
@@ -111,7 +115,7 @@ class HomeController extends Controller
      * @param  [type] $num [description]
      * @return [type]      [description]
      */
-    public function periodNature($num)
+    public static function periodNature($num)
     {
         $result = "";
         $day = floor($num / 2);

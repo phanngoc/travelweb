@@ -35,7 +35,6 @@ body {
 }
 .royalSlider {
   width: 100%;
-  height: 560px;
 }
 div.inner-menu {
   width: 100% !important;
@@ -180,6 +179,31 @@ div.logo {
   margin-top: 18px;
   text-decoration: none;
   padding-top: 8px;
+}
+.search-area {
+  display: block;
+  margin: 0px auto;
+  width: 60%;
+  background: url('../../images/vertical_cloth.png') repeat;
+  border-radius: 17px;
+}
+.search-area .inner-search-area {
+  display: block;
+  padding-left: 16px;
+  padding-bottom: 16px;
+  padding-right: 16px;
+  padding-top: 10px;
+  color: white;
+}
+.search-area .inner-search-area .select2-container {
+  width: 250px !important;
+}
+.search-area .inner-search-area .select2-selection {
+  height: 35px;
+}
+.search-area .inner-search-area button {
+  margin-top: 39px;
+  margin-left: -36px;
 }
 .inner-wrapper-content .page-content .inner-page-content .feature-tour .inner-feature-tour .list-item .inner-list-item:after {
   content: ".";

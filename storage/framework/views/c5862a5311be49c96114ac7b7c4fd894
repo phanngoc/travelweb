@@ -1,21 +1,20 @@
-@extends ('home.master')
-@section ('head.title')
+<?php $__env->startSection('head.title'); ?>
   Trang web du lịch chính thức Việt Nam.
-@stop
-@section ('body.content')
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('body.content'); ?>
  <!-- basic stylesheet -->
-<link rel="stylesheet" href="{{ Asset('royalslider/royalslider.css') }}">
+<link rel="stylesheet" href="<?php echo e(Asset('royalslider/royalslider.css')); ?>">
 
 <!-- skin stylesheet (change it if you use another) -->
-<link rel="stylesheet" href="{{ Asset('royalslider/skins/default/rs-default.css') }}"> 
+<link rel="stylesheet" href="<?php echo e(Asset('royalslider/skins/default/rs-default.css')); ?>"> 
 
 <!-- Plugin requires jQuery 1.8+  -->
 <!-- If you already have jQuery on your page, you shouldn't include it second time. -->
 <!-- <script src='royalslider/jquery-1.8.3.min.js'></script> -->
 
 <!-- select2 -->
-<script src="{{ Asset('select2/select2.js') }}"></script>
-<link rel="stylesheet" href="{{ Asset('select2/select2.css') }}" />
+<script src="<?php echo e(Asset('select2/select2.js')); ?>"></script>
+<link rel="stylesheet" href="<?php echo e(Asset('select2/select2.css')); ?>" />
 
 <script>
     jQuery(document).ready(function($) {
@@ -24,7 +23,7 @@
     });
 </script>
 
-<link rel="stylesheet" href="{{Asset('lesscss/css/searchtour.css')}}" />
+<link rel="stylesheet" href="<?php echo e(Asset('lesscss/css/searchtour.css')); ?>" />
   <div class="wrapper-content">
     <div class="inner-wrapper-content">
       <div class="col-md-3 sidebar-left">
@@ -36,7 +35,7 @@
               </header>
               <div class="content">
                 <div class="inner-content">
-                  <form action="{{ route('searchtour') }}" method="GET">
+                  <form action="<?php echo e(route('searchtour')); ?>" method="GET">
                   <!-- <input type="hidden" name="_token" value="Ơ csrf_token() Ư"> -->
                       <div class="item">
                         <p>Bạn muốn đi du lịch đến:</p>
@@ -45,7 +44,7 @@
                              <?php
                               foreach ($destinationsData as $key => $value) {
                                 ?>
-                                  <option value="<?php echo $value->id ?>" <?php if(isset($_GET['destinations'])) { echo $_GET['destinations'] == $value->id ? 'selected' : ''; }?>>{{$value->city}}</option>
+                                  <option value="<?php echo $value->id ?>" <?php if(isset($_GET['destinations'])) { echo $_GET['destinations'] == $value->id ? 'selected' : ''; }?>><?php echo e($value->city); ?></option>
                                 <?php
                               }
                              ?>
@@ -59,7 +58,7 @@
                            <?php
                             foreach ($destinationsData as $key => $value) {
                               ?>
-                                <option value="<?php echo $value->id ?>"  <?php if(isset($_GET['departures'])) { echo $_GET['departures'] == $value->id ? 'selected' : ''; }?>>{{$value->city}}</option>
+                                <option value="<?php echo $value->id ?>"  <?php if(isset($_GET['departures'])) { echo $_GET['departures'] == $value->id ? 'selected' : ''; }?>><?php echo e($value->city); ?></option>
                               <?php
                             }
                            ?>
@@ -95,14 +94,14 @@
                           <li>
                             <div class="inner-item">
                               <div class="wrap-image">
-                                <img src="{{ Asset('tours/'.$value->image->link) }}" alt="">
+                                <img src="<?php echo e(Asset('tours/'.$value->image->link)); ?>" alt="">
                               </div> 
                               <div class="wrap-row">
                                   <div class="item-content col-md-9">
-                                    <h4><a href="javascript:">{{ $value->title }}</a></h4>
+                                    <h4><a href="javascript:"><?php echo e($value->title); ?></a></h4>
                                     <p>
-                                      <span class="code">Mã tour:{{ $value->code }}</span> 
-                                      <span class="calendar"><i class="fa fa-calendar-times-o"></i>{{ $value->periodNature }}</span> 
+                                      <span class="code">Mã tour:<?php echo e($value->code); ?></span> 
+                                      <span class="calendar"><i class="fa fa-calendar-times-o"></i><?php echo e($value->periodNature); ?></span> 
                                     </p>
                                     <div class="description">
                                       <?php 
@@ -114,7 +113,7 @@
                                   <div class="more col-md-3">
                                         <div class="price">
                                           Giá 1 khách:
-                                          <b>{{ $value->price }}d</b>
+                                          <b><?php echo e($value->price); ?>d</b>
                                         </div>
                                         <div class="detail"><a href="javascript:">Xem chi tiết</a></div>
                                   </div>
@@ -128,7 +127,8 @@
                  
                 </div> <!-- .inner-wrap-list -->
                 <div class="wrap-pagination">
-                    {!! $tours->render() !!}
+                    <?php echo $tours->render(); ?>
+
                 </div>
               </div>
             </div>
@@ -138,4 +138,5 @@
       </div> <!-- .page-content -->
     </div>
   </div>
-@stop
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('home.master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

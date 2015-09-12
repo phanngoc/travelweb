@@ -51,4 +51,30 @@ class Tour extends Model {
 		}
 		return $tours;	
 	}
+
+	/**
+	 * [getTourSearch description]
+	 * @param  [type] $id_depart [description]
+	 * @param  [type] $id_desti  [description]
+	 * @return [type]            [description]
+	 */
+	public static function getTourSearch($id_depart,$id_desti)
+	{
+		$table = DB::table('tours');
+		if($id_depart != 0)
+		{
+			$table = $table->where('departure_id',$id_depart);
+		}
+
+		if($id_desti != 0)
+		{
+			$table = $table->join('tour_destinations','tours.id','=','tour_destinations.tour_id')->select('tours.*', 'tour_destinations.destination_id')->where('destination_id',$id_desti);
+		}
+		$tours = $table->paginate(8);
+		foreach ($tours as $key => $value) {
+			$image = TourImage::where('tour_id',$value->id)->first();
+			$tours[$key]->image = $image;
+		}
+		return $tours;
+	}
 }

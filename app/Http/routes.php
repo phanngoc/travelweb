@@ -17,4 +17,7 @@ Route::get('/p/{id}/{more}',['as'=>'detailpost','uses'=>'HomeController@postdeta
 Route::post('/p/{id}/{more}',['as'=>'submitCommentPost','uses'=>'HomeController@submitCommentPostDetail']);
 Route::get('/tour',['as'=>'tour','uses'=>'HomeController@tour']);
 
+// Route::post('/searchtour',['as'=>'searchtour','uses'=>'TourController@index']);
+Route::get('/searchtour',['as'=>'searchtour','uses'=>'TourController@index']);
+
 Route::get('testmid', ['middleware' => 'mymiddleware:param1,param2','uses' => 'MyController@index']);

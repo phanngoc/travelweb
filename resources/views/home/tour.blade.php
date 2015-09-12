@@ -17,15 +17,22 @@
 <!-- Create it with slider online build tool for better performance. -->
 <script src="{{ Asset('royalslider/jquery.royalslider.min.js') }}"></script>
 
+<!-- select2 -->
+<script src="{{ Asset('select2/select2.js') }}"></script>
+<link rel="stylesheet" href="{{ Asset('select2/select2.css') }}" />
+
 <script>
     jQuery(document).ready(function($) {
         $(".royalSlider").royalSlider({
             // options go here
             // as an example, enable keyboard arrows nav
             keyboardNavEnabled: true,
-            autoScaleSlider : true,
+            // autoScaleSlider : true,
             imageScaleMode : "fill"
         });  
+
+        $('#destinations').select2();
+        $('#departures').select2();
     });
 </script>
 
@@ -40,6 +47,55 @@
       <img class="rsImg" src="{{ Asset('images/beachstuff-1349x579.jpg') }}" />
 
     </div>  <!-- .royalSlider rsDefault -->
+
+    <div class="search-area">
+      <div class="inner-search-area">
+        <header>
+          <h3>Tìm tour du lịch</h3>
+        </header>
+        <div class="detail row">
+          <div class="inner-detail">
+            <form action="{{ route('searchtour') }}" method="GET">
+           <!--    <input type="hidden" name="_token" value="{{ csrf_token() }}"> -->
+              <div class="col-md-5">
+                <div class="inner-col-1">
+                  <h4>Bạn muốn đi du lịch đến:</h4>
+                  <select name="destinations" id="destinations">
+                     <?php
+                      foreach ($destinations as $key => $value) {
+                        ?>
+                          <option value="{{ $value->id }}">{{$value->city}}</option>
+                        <?php
+                      }
+                     ?>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-5">
+                <div class="inner-col-2">
+                  <h4>Khởi hành từ</h4>
+                  <select name="departures" id="departures">
+                     <?php
+                      foreach ($departures as $key => $value) {
+                        ?>
+                          <option value="{{ $value->id }}">{{$value->city}}</option>
+                        <?php
+                      }
+                     ?>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="inner-col-3">
+                   <button type="submit" class="btn btn-primary">Tìm tour</button>
+                </div>
+              </div>
+            </form> 
+          </div> <!-- .inner-detail -->
+        </div>
+      </div>
+    </div> <!-- .search-area -->
+
     <div class="inner-wrapper-content">
       <div class="page-content row">
         <div class="inner-page-content">
