@@ -1,0 +1,269 @@
+@extends ('home.master')
+@section ('head.title')
+  Trang web du lịch chính thức Việt Nam.
+@stop
+@section ('body.content')
+ <!-- basic stylesheet -->
+<link rel="stylesheet" href="{{ Asset('royalslider/royalslider.css') }}">
+
+<!-- skin stylesheet (change it if you use another) -->
+<link rel="stylesheet" href="{{ Asset('royalslider/skins/default/rs-default.css') }}"> 
+<script src="{{ Asset('royalslider/jquery.royalslider.min.js') }}"></script>
+<!-- Plugin requires jQuery 1.8+  -->
+<!-- If you already have jQuery on your page, you shouldn't include it second time. -->
+<!-- <script src='royalslider/jquery-1.8.3.min.js'></script> -->
+
+<!-- select2 -->
+<script src="{{ Asset('select2/select2.js') }}"></script>
+<link rel="stylesheet" href="{{ Asset('select2/select2.css') }}" />
+
+<!-- jquery UI -->
+<link rel="stylesheet" href="{{ Asset('jquery-ui/jquery-ui.min.css') }}">
+<link rel="stylesheet" href="{{ Asset('jquery-ui/jquery-ui.theme.css') }}">
+<script type="text/javascript" src="{{ Asset('jquery-ui/jquery-ui.min.js') }}"></script>
+
+<script>
+    jQuery(document).ready(function($) {
+      $('#full-width-slider').royalSlider({
+        arrowsNav: true,
+        loop: false,
+        keyboardNavEnabled: true,
+        controlsInside: false,
+        imageScaleMode: 'fill',
+        arrowsNavAutoHide: false,
+        autoScaleSlider: true, 
+        autoScaleSliderWidth: 960,     
+        autoScaleSliderHeight: 350,
+        controlNavigation: 'bullets',
+        thumbsFitInViewport: false,
+        navigateByClick: true,
+        startSlideId: 0,
+        autoPlay: false,
+        transitionType:'move',
+        globalCaption: true,
+        deeplinking: {
+          enabled: true,
+          change: false
+        },
+        /* size of all images http://help.dimsemenov.com/kb/royalslider-jquery-plugin-faq/adding-width-and-height-properties-to-images */
+        imgWidth: 1400,
+        imgHeight: 680
+      });
+
+      $('#datepicker').datepicker();
+    });
+</script>
+
+<link rel="stylesheet" href="{{Asset('lesscss/css/detailtour.css')}}" />
+  <div class="wrapper-content">
+    <div class="inner-wrapper-content">
+      <div class="slider-top">
+        <div class="inner-slider-top">
+            <div class="sliderContainer fullWidth clearfix">
+              <div id="full-width-slider">
+                <?php 
+                  foreach ($tourimages as $key => $value) {
+                    ?>
+                    <div class="rsContent">
+                      <img class="rsImg" src="{{ Asset('tours/'.$value->link) }}" alt="" />
+                      <div class="infoBlock infoBlockLeftBlack rsABlock" data-fade-effect="" data-move-offset="10" data-move-effect="bottom" data-speed="200">
+                        <h4>This is an animated block, add any number of them to any type of slide</h4>
+                        <p>Put completely anything inside - text, images, inputs, links, buttons.</p>
+                      </div>
+                    </div>
+                    <?php
+                  }
+                ?>
+              </div>
+            </div>
+        </div>
+      </div> <!-- .slider-top -->
+      <div class="header">
+        <div class="inner-header">
+           <div class="row">
+              <div class="area-left col-md-6">
+                <div class="inner-area-left">
+                   <h3>{{ $tour->title }}</h3>
+                   <div class="list-info">
+                     <ul>
+                       <li><span>Khởi hành từ: {{ $tour->departure->city }}</span></li>
+                      <!--  <li><span>{{ $tour->departure->city }}</span></li> -->
+                       <li>
+                          <span>Địa điểm tham quan:
+                           <?php
+                            foreach ($tour->destinations as $key => $value) {
+                              echo $value->city.',';
+                            }
+                           ?> 
+                          </span>
+                       </li>
+                     </ul>
+                   </div>
+                 </div>
+              </div>
+
+              <div class="area-right col-md-6">
+                 <div class="inner-area-right">
+                   <div class="code">Mã tour: {{ $tour->code }}</div>
+                   <div class="price">{{ $tour->price }} d/khách</div>
+                 </div>
+              </div>
+           </div>
+        </div>
+      </div> <!-- .header -->
+      <div class="bar-set">
+        <div class="inner-bar-set">
+          <div class="social col-md-4">
+            <div id="fb-root"></div>
+            <script>(function(d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) return;
+              js = d.createElement(s); js.id = id;
+              js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4&appId=745428538868733";
+              fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
+            <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+          
+            <div class="group-icon-share">
+              <ul>
+                <li><a href="javascript:"><img src="{{ Asset('images/icn-facebook.png') }}" /></a></li>
+                <li><a href="javascript:"><img src="{{ Asset('images/icn-twitter.png') }}" /></a></li>
+                <li><a href="javascript:"><img src="{{ Asset('images/icn-oogleplus.png') }}" /></a></li>
+                <li><a href="javascript:"><img src="{{ Asset('images/icn-pinterest.png') }}" /></a></li>
+              </ul>
+            </div>
+          </div> <!-- .social -->
+          <div class="time-depature">
+            <p>Thời gian khởi hành</p> <input type="text" id="datepicker" name="count" />
+          </div> <!-- .time-depature -->
+          <div class="count-people">
+            <p>Số khách</p> <input type="text" nam="count" />
+          </div>
+          <div class="submit-tour">
+            <button type="submit" class="btn-submit">Đặt tour</button>
+          </div>
+        </div> <!-- .inner-bar-set -->
+      </div> <!-- .bar-set -->
+      <div class="content-tour">
+        <div class="inner-content-tour">
+          
+          <div class="calendar-tour">
+            <div class="inner-calendar-tour">
+              <div class="col-md-2">
+                <div class="inner-left">
+                  <h3>Lịch trình tour</h3>
+                </div>
+              </div>
+              <div class="col-md-10">
+                <div class="inner-right">
+                  <div class="content">{{$tour->content}}</div>
+                </div>
+              </div>
+            </div>
+          </div> <!-- .calendar-tour -->
+          
+          <div class="price-include">
+            <div class="inner-price-include">
+              <div class="col-md-2">
+                <div class="inner-left">
+                  <h3>Giá bao gồm</h3>
+                </div>
+              </div>
+              <div class="col-md-10">
+                <div class="inner-right">
+                  <div class="content">{{$tour->price_include}}</div>
+                </div>
+              </div>
+            </div>
+          </div> <!-- .price-include -->
+          
+          <div class="price-not-include">
+            <div class="inner-price-not-include">
+              <div class="col-md-2">
+                <div class="inner-left">
+                  <h3>Giá không bao gồm</h3>
+                </div>
+              </div>
+              <div class="col-md-10">
+                <div class="inner-right">
+                  <div class="content">{{$tour->price_not_include}}</div>
+                </div>
+              </div>
+            </div>
+          </div> <!-- .price-not-include -->
+          
+          <div class="regulation-destroy-tour">
+            <div class="inner-regulation-destroy-tour">
+              <div class="col-md-2">
+                <div class="inner-left">
+                  <h3>Điều kiện hủy tour</h3>
+                </div>
+              </div>
+              <div class="col-md-10">
+                <div class="inner-right">
+                  <div class="content">{{$tour->regulation_destroy_tour}}</div>
+                </div>
+              </div>
+            </div>
+          </div> <!-- .regulation-destroy-tour -->
+
+          <div class="note">
+            <div class="inner-note">
+              <div class="col-md-2">
+                <div class="inner-left">
+                  <h3>Lưu ý</h3>
+                </div>
+              </div>
+              <div class="col-md-10">
+                <div class="inner-right">
+                  <div class="content">{{$tour->note}}</div>
+                </div>
+              </div>
+            </div>
+          </div> <!-- .note -->
+
+        </div> <!-- .inner-content-tour -->
+      </div> <!-- .content-tour -->
+      <div class="tour-relevant">
+        <div class="inner-tour-relevant">
+          <header>
+            <h3><i class="fa fa-bus"></i>Tour du lịch</h3>
+          </header>
+          <div class="content-tour-relevant">
+            <ul>
+            <?php 
+              foreach ($tour->tour_relevant as $key => $value) {
+                ?>
+                  <li class="col-md-6">
+                    <div class="inner-item">
+                        <div class="wrap-image">
+                          <img src="{{ Asset('tours/'.$value->image->link) }}" alt="">
+                        </div> 
+                        <div class="wrap-row">
+                            <div class="item-content col-md-9">
+                              <h4><a href="javascript:">{{ $value->title }}</a></h4>
+                              <p>
+                                <span class="code">Mã tour:{{ $value->code }}</span> 
+                                <span class="calendar"><i class="fa fa-calendar-times-o"></i>{{ $value->periodNature }}</span> 
+                              </p>
+                            </div>  
+                            <div class="more col-md-3">
+                                  <div class="price">
+                                    Giá 1 khách:
+                                    <b>{{ $value->price }}d</b>
+                                  </div>
+                                  <div class="detail"><a href="javascript:">Xem chi tiết</a></div>
+                            </div>
+                        </div> <!-- .wrap-row -->
+                      </div>
+                  </li>
+                <?php
+              }
+            ?>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+@stop

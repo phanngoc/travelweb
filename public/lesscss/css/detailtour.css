@@ -1,0 +1,509 @@
+.clearfix:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  clear: both;
+  height: 0;
+  font-size: 0;
+}
+.wrapper-content:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  clear: both;
+  height: 0;
+  font-size: 0;
+}
+.wrapper-content .inner-wrapper-content {
+  display: block;
+  margin: 0px auto;
+  width: 90%;
+  padding-top: 20px;
+  margin-top: 12px;
+  background: url('../../images/separator.jpg') repeat-x;
+}
+.wrapper-content .inner-wrapper-content:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  clear: both;
+  height: 0;
+  font-size: 0;
+}
+body {
+  background: url('../../images/bg.jpg') repeat;
+}
+.wrapper-content .inner-wrapper-content .header {
+  display: block;
+  background-color: white;
+}
+.wrapper-content .inner-wrapper-content .header .inner-header .area-left .inner-area-left h3 {
+  padding: 4px;
+  padding-left: 41px;
+  color: #1c91ea;
+}
+.wrapper-content .inner-wrapper-content .header .inner-header .area-left .inner-area-left div.list-info ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 5px;
+  border-right: 1px solid #919191;
+}
+.wrapper-content .inner-wrapper-content .header .inner-header .area-left .inner-area-left div.list-info ul li span {
+  font-family: Tahoma, Verdana, Arial, sans-serif;
+  color: #7D7A7A;
+}
+.wrapper-content .inner-wrapper-content .header .inner-header .area-right .inner-area-right .code {
+  margin-top: 23px;
+  display: block;
+  float: right;
+  padding: 5px;
+  margin-right: 18px;
+  border-radius: 5px;
+  background-color: #FFF4E2;
+  color: #AE7518;
+  font: 16px/2 "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.wrapper-content .inner-wrapper-content .header .inner-header .area-right .inner-area-right .price {
+  display: block;
+  float: right;
+  padding: 5px;
+  padding-right: 18px;
+  color: #FFAC23;
+  font-size: 21px;
+  font-weight: bold;
+  clear: both;
+}
+.wrapper-content .inner-wrapper-content .bar-set .inner-bar-set {
+  display: block;
+  background: url('../../images/bar-set-tour.jpg') no-repeat;
+  background-size: 100%;
+  color: white;
+}
+.wrapper-content .inner-wrapper-content .bar-set .inner-bar-set:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  clear: both;
+  height: 0;
+  font-size: 0;
+}
+.wrapper-content .inner-wrapper-content .bar-set .inner-bar-set .social {
+  display: block;
+  float: left;
+}
+.wrapper-content .inner-wrapper-content .bar-set .inner-bar-set .social .fb-like {
+  display: block;
+  float: left;
+  margin-top: 15px;
+}
+.wrapper-content .inner-wrapper-content .bar-set .inner-bar-set .social .group-icon-share {
+  display: block;
+  float: left;
+}
+.wrapper-content .inner-wrapper-content .bar-set .inner-bar-set .social .group-icon-share ul {
+  margin-top: 6px;
+  margin-bottom: 4px;
+}
+.wrapper-content .inner-wrapper-content .bar-set .inner-bar-set .social .group-icon-share ul li {
+  list-style: none;
+  display: inline-block;
+}
+.wrapper-content .inner-wrapper-content .bar-set .inner-bar-set .social .group-icon-share ul li a {
+  text-decoration: none;
+}
+.wrapper-content .inner-wrapper-content .bar-set .inner-bar-set .time-depature {
+  display: block;
+  float: left;
+  width: 340px;
+  margin-top: 8px;
+}
+.wrapper-content .inner-wrapper-content .bar-set .inner-bar-set .time-depature p {
+  display: block;
+  float: left;
+  margin-top: 9px;
+  font-family: Tahoma, Verdana, Arial, sans-serif;
+}
+.wrapper-content .inner-wrapper-content .bar-set .inner-bar-set .time-depature input {
+  display: block;
+  width: 125px;
+  height: 36px;
+  float: left;
+  margin-left: 4px;
+  color: black;
+}
+.wrapper-content .inner-wrapper-content .bar-set .inner-bar-set .count-people {
+  display: block;
+  float: left;
+  width: 185px;
+  margin-top: 8px;
+}
+.wrapper-content .inner-wrapper-content .bar-set .inner-bar-set .count-people p {
+  display: block;
+  float: left;
+  margin-top: 9px;
+  font-family: Tahoma, Verdana, Arial, sans-serif;
+}
+.wrapper-content .inner-wrapper-content .bar-set .inner-bar-set .count-people input {
+  display: block;
+  float: left;
+  width: 62px;
+  height: 36px;
+  margin-left: 4px;
+  color: black;
+}
+.wrapper-content .inner-wrapper-content .bar-set .inner-bar-set .submit-tour {
+  display: block;
+}
+.wrapper-content .inner-wrapper-content .bar-set .inner-bar-set .submit-tour button {
+  margin-top: 6px;
+  display: table-cell;
+  margin-bottom: 0;
+  text-align: center;
+  vertical-align: middle;
+  background-image: none;
+  border: none;
+  white-space: nowrap;
+  border-bottom: 3px solid #0A819B;
+  background-color: #00c0d9;
+  color: #fff;
+  height: 40px;
+  padding: 5px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+  outline: none;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  background-color: #FFAC23;
+  border-bottom: 3px solid #cc891c;
+}
+.wrapper-content .inner-wrapper-content .style-block {
+  background-color: white;
+  border-top: 1px dotted #cccccc;
+}
+.wrapper-content .inner-wrapper-content .style-block:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  clear: both;
+  height: 0;
+  font-size: 0;
+}
+.wrapper-content .inner-wrapper-content .style-block div.inner-left h3 {
+  color: #032f96;
+  font-size: 21px;
+  font-family: "Varela Round";
+  font-weight: bold;
+}
+.wrapper-content .inner-wrapper-content .style-block div.inner-right .content {
+  font-family: "Open Sans";
+  font-weight: 500;
+  font-size: 17px;
+  padding-top: 20px;
+  padding-bottom: 15px;
+}
+.wrapper-content .inner-wrapper-content .content-tour .inner-content-tour div.calendar-tour:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  clear: both;
+  height: 0;
+  font-size: 0;
+}
+.wrapper-content .inner-wrapper-content .content-tour .inner-content-tour div.calendar-tour div.inner-calendar-tour {
+  background-color: white;
+  border-top: 1px dotted #cccccc;
+}
+.wrapper-content .inner-wrapper-content .content-tour .inner-content-tour div.calendar-tour div.inner-calendar-tour:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  clear: both;
+  height: 0;
+  font-size: 0;
+}
+.wrapper-content .inner-wrapper-content .content-tour .inner-content-tour div.calendar-tour div.inner-calendar-tour div.inner-left h3 {
+  color: #032f96;
+  font-size: 21px;
+  font-family: "Varela Round";
+  font-weight: bold;
+}
+.wrapper-content .inner-wrapper-content .content-tour .inner-content-tour div.calendar-tour div.inner-calendar-tour div.inner-right .content {
+  font-family: "Open Sans";
+  font-weight: 500;
+  font-size: 17px;
+  padding-top: 20px;
+  padding-bottom: 15px;
+}
+.wrapper-content .inner-wrapper-content .content-tour .inner-content-tour div.price-include div.inner-price-include {
+  background-color: white;
+  border-top: 1px dotted #cccccc;
+}
+.wrapper-content .inner-wrapper-content .content-tour .inner-content-tour div.price-include div.inner-price-include:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  clear: both;
+  height: 0;
+  font-size: 0;
+}
+.wrapper-content .inner-wrapper-content .content-tour .inner-content-tour div.price-include div.inner-price-include div.inner-left h3 {
+  color: #032f96;
+  font-size: 21px;
+  font-family: "Varela Round";
+  font-weight: bold;
+}
+.wrapper-content .inner-wrapper-content .content-tour .inner-content-tour div.price-include div.inner-price-include div.inner-right .content {
+  font-family: "Open Sans";
+  font-weight: 500;
+  font-size: 17px;
+  padding-top: 20px;
+  padding-bottom: 15px;
+}
+.wrapper-content .inner-wrapper-content .content-tour .inner-content-tour div.price-not-include div.inner-price-not-include {
+  background-color: white;
+  border-top: 1px dotted #cccccc;
+}
+.wrapper-content .inner-wrapper-content .content-tour .inner-content-tour div.price-not-include div.inner-price-not-include:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  clear: both;
+  height: 0;
+  font-size: 0;
+}
+.wrapper-content .inner-wrapper-content .content-tour .inner-content-tour div.price-not-include div.inner-price-not-include div.inner-left h3 {
+  color: #032f96;
+  font-size: 21px;
+  font-family: "Varela Round";
+  font-weight: bold;
+}
+.wrapper-content .inner-wrapper-content .content-tour .inner-content-tour div.price-not-include div.inner-price-not-include div.inner-right .content {
+  font-family: "Open Sans";
+  font-weight: 500;
+  font-size: 17px;
+  padding-top: 20px;
+  padding-bottom: 15px;
+}
+.wrapper-content .inner-wrapper-content .content-tour .inner-content-tour div.regulation-destroy-tour div.inner-regulation-destroy-tour {
+  background-color: white;
+  border-top: 1px dotted #cccccc;
+}
+.wrapper-content .inner-wrapper-content .content-tour .inner-content-tour div.regulation-destroy-tour div.inner-regulation-destroy-tour:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  clear: both;
+  height: 0;
+  font-size: 0;
+}
+.wrapper-content .inner-wrapper-content .content-tour .inner-content-tour div.regulation-destroy-tour div.inner-regulation-destroy-tour div.inner-left h3 {
+  color: #032f96;
+  font-size: 21px;
+  font-family: "Varela Round";
+  font-weight: bold;
+}
+.wrapper-content .inner-wrapper-content .content-tour .inner-content-tour div.regulation-destroy-tour div.inner-regulation-destroy-tour div.inner-right .content {
+  font-family: "Open Sans";
+  font-weight: 500;
+  font-size: 17px;
+  padding-top: 20px;
+  padding-bottom: 15px;
+}
+.wrapper-content .inner-wrapper-content .content-tour .inner-content-tour div.note div.inner-note {
+  background-color: white;
+  border-top: 1px dotted #cccccc;
+}
+.wrapper-content .inner-wrapper-content .content-tour .inner-content-tour div.note div.inner-note:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  clear: both;
+  height: 0;
+  font-size: 0;
+}
+.wrapper-content .inner-wrapper-content .content-tour .inner-content-tour div.note div.inner-note div.inner-left h3 {
+  color: #032f96;
+  font-size: 21px;
+  font-family: "Varela Round";
+  font-weight: bold;
+}
+.wrapper-content .inner-wrapper-content .content-tour .inner-content-tour div.note div.inner-note div.inner-right .content {
+  font-family: "Open Sans";
+  font-weight: 500;
+  font-size: 17px;
+  padding-top: 20px;
+  padding-bottom: 15px;
+}
+.wrapper-content .inner-wrapper-content .tour-relevant {
+  background-color: #f7f7f7;
+  padding-top: 3px;
+  margin-top: 16px;
+  box-shadow: 0 1px 0 #bbb;
+  padding-bottom: 11px;
+}
+.wrapper-content .inner-wrapper-content .tour-relevant:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  clear: both;
+  height: 0;
+  font-size: 0;
+}
+.wrapper-content .inner-wrapper-content .tour-relevant .inner-tour-relevant:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  clear: both;
+  height: 0;
+  font-size: 0;
+}
+.wrapper-content .inner-wrapper-content .tour-relevant .inner-tour-relevant header h3 {
+  padding-left: 15px;
+}
+.wrapper-content .inner-wrapper-content .tour-relevant .inner-tour-relevant .content-tour-relevant ul {
+  padding-left: 0px;
+}
+.wrapper-content .inner-wrapper-content .tour-relevant .inner-tour-relevant .content-tour-relevant ul li {
+  list-style: none;
+  display: block;
+}
+.wrapper-content .inner-wrapper-content .tour-relevant .inner-tour-relevant .content-tour-relevant ul li:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  clear: both;
+  height: 0;
+  font-size: 0;
+}
+.wrapper-content .inner-wrapper-content .tour-relevant .inner-tour-relevant .content-tour-relevant ul li div.inner-item {
+  background-color: white;
+  padding: 10px;
+  border-bottom: 1px solid #dbdbdb;
+}
+.wrapper-content .inner-wrapper-content .tour-relevant .inner-tour-relevant .content-tour-relevant ul li div.inner-item:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  clear: both;
+  height: 0;
+  font-size: 0;
+}
+.wrapper-content .inner-wrapper-content .tour-relevant .inner-tour-relevant .content-tour-relevant ul li div.inner-item .wrap-image {
+  display: block;
+  float: left;
+}
+.wrapper-content .inner-wrapper-content .tour-relevant .inner-tour-relevant .content-tour-relevant ul li div.inner-item .wrap-image img {
+  width: 64px;
+  height: 64px;
+  display: block;
+  border-radius: 6px;
+}
+.wrapper-content .inner-wrapper-content .tour-relevant .inner-tour-relevant .content-tour-relevant ul li div.inner-item .wrap-row {
+  display: block;
+  float: left;
+  width: 84%;
+}
+.wrapper-content .inner-wrapper-content .tour-relevant .inner-tour-relevant .content-tour-relevant ul li div.inner-item .wrap-row:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  clear: both;
+  height: 0;
+  font-size: 0;
+}
+.wrapper-content .inner-wrapper-content .tour-relevant .inner-tour-relevant .content-tour-relevant ul li div.inner-item .wrap-row .item-content {
+  display: block;
+  float: left;
+}
+.wrapper-content .inner-wrapper-content .tour-relevant .inner-tour-relevant .content-tour-relevant ul li div.inner-item .wrap-row .item-content h4 a {
+  text-decoration: none;
+  font-family: "Open Sans";
+  font-weight: 800;
+}
+.wrapper-content .inner-wrapper-content .tour-relevant .inner-tour-relevant .content-tour-relevant ul li div.inner-item .wrap-row .item-content p {
+  display: block;
+  width: 100%;
+}
+.wrapper-content .inner-wrapper-content .tour-relevant .inner-tour-relevant .content-tour-relevant ul li div.inner-item .wrap-row .item-content p:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  clear: both;
+  height: 0;
+  font-size: 0;
+}
+.wrapper-content .inner-wrapper-content .tour-relevant .inner-tour-relevant .content-tour-relevant ul li div.inner-item .wrap-row .item-content p span.code {
+  display: block;
+  padding-right: 2px;
+  border-right: 1px solid #c0c0c0;
+  width: 100px;
+  float: left;
+}
+.wrapper-content .inner-wrapper-content .tour-relevant .inner-tour-relevant .content-tour-relevant ul li div.inner-item .wrap-row .item-content p span.calendar {
+  padding-left: 2px;
+  float: left;
+  display: block;
+  width: 114px;
+  padding-left: 10px;
+}
+.wrapper-content .inner-wrapper-content .tour-relevant .inner-tour-relevant .content-tour-relevant ul li div.inner-item .wrap-row .more:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  clear: both;
+  height: 0;
+  font-size: 0;
+}
+.wrapper-content .inner-wrapper-content .tour-relevant .inner-tour-relevant .content-tour-relevant ul li div.inner-item .wrap-row .more div.price {
+  font-size: 0.75em;
+  color: #979797;
+  font-family: Tahoma, Verdana, Arial, sans-serif;
+}
+.wrapper-content .inner-wrapper-content .tour-relevant .inner-tour-relevant .content-tour-relevant ul li div.inner-item .wrap-row .more div.price b {
+  font-size: 19px;
+  display: block;
+  font-weight: bold;
+  color: #FFAC23;
+}
+.wrapper-content .inner-wrapper-content .tour-relevant .inner-tour-relevant .content-tour-relevant ul li div.inner-item .wrap-row .more div.detail a {
+  background-color: transparent;
+  border: 1px solid #15415E;
+  color: #15415E;
+  display: table-cell;
+  margin-bottom: 0px;
+  text-align: center;
+  vertical-align: middle;
+  background-image: none;
+  border-width: medium medium 3px;
+  border-style: none none solid;
+  border-color: -moz-use-text-color -moz-use-text-color #0a819b;
+  -moz-border-top-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  border-image: none;
+  white-space: nowrap;
+  background-color: #00C0D9;
+  color: #FFF;
+  height: 40px;
+  padding: 5px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.75em;
+  text-transform: uppercase;
+  font-weight: bold;
+  outline: medium none;
+  transition: all 0.25s ease-in-out 0s;
+  display: block;
+  /* text-align: center; */
+  font-size: 14px;
+  margin: 0px auto;
+  width: 119px;
+  margin-top: 18px;
+  text-decoration: none;
+  padding-top: 8px;
+}

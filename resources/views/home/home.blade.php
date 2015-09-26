@@ -25,7 +25,7 @@
                           <div class="image-wrapper">
                             <img src="{{Asset('posts/'.$vpf->image)}}" alt="">
                           </div>
-                          <h4><?php echo $vpf->title; ?></h4>
+                          <h4><a href="{{ route('detailpost',array('id'=>$vpf->id,'more'=>$vpf->title)) }}"><?php echo $vpf->title; ?></a></h4>
                           <div class="description">
                             <?php echo substr($vpf->content,0,80)."...";?>
                           </div>

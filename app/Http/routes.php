@@ -11,13 +11,15 @@
 |
 */
 
-Route::get('/','HomeController@index');
-Route::get('/cate/{id}/{name}','HomeController@category');
+Route::get('','HomeController@index');
+Route::get('/cate/{id}/{name}',[ 'as'=>'showcate','uses'=>'HomeController@category']);
 Route::get('/p/{id}/{more}',['as'=>'detailpost','uses'=>'HomeController@postdetail']);
 Route::post('/p/{id}/{more}',['as'=>'submitCommentPost','uses'=>'HomeController@submitCommentPostDetail']);
 Route::get('/tour',['as'=>'tour','uses'=>'HomeController@tour']);
 
 // Route::post('/searchtour',['as'=>'searchtour','uses'=>'TourController@index']);
 Route::get('/searchtour',['as'=>'searchtour','uses'=>'TourController@index']);
+Route::get('/landscape/{id}',['as'=>'landscape','uses'=>'TourController@landscape']);
+Route::get('/detailtour/{id}',['as'=>'detailtour','uses'=>'TourController@detailtour']);
 
 Route::get('testmid', ['middleware' => 'mymiddleware:param1,param2','uses' => 'MyController@index']);

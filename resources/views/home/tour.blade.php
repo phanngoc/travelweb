@@ -140,7 +140,7 @@
                   </div> <!-- .inner-list-item -->
                 </div> <!-- .list-item -->
                 <div class="wrap-button-all">
-                  <a href="javascript:" class="see-all">Xem tất cả tour</a>
+                  <a href="{{ route('searchtour') }}" class="see-all">Xem tất cả tour</a>
                 </div>
             </div>
           </div>

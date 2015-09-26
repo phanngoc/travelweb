@@ -3,7 +3,7 @@
 <?php $__env->stopSection(); ?>
 <?php $__env->startSection('body.content'); ?>
   <link rel="stylesheet" href="<?php echo e(Asset('lesscss/css/post-detail.css')); ?>" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  
   <div class="wrapper-content">
     <div class="inner-wrapper-content">
       <div class="page-content col-md-9">

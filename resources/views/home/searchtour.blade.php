@@ -21,6 +21,15 @@
     jQuery(document).ready(function($) {
         $('#destinations').select2();
         $('#departures').select2();
+        $('ul.abroad').hide();
+        $('.control-land .in').click(function(){
+          $('ul.abroad').hide();
+          $('ul.notabroad').show();
+        });
+        $('.control-land .out').click(function(){
+          $('ul.abroad').show();
+          $('ul.notabroad').hide();
+        });
     });
 </script>
 
@@ -76,6 +85,51 @@
               </div>
             </div> <!-- .inner-search-tour -->
           </div> <!-- .search-tour -->
+          
+          <div class="tour-landscape">
+            <div class="inner-tour-landscape">
+              <header>
+                <h4>Tour theo địa danh</h4>
+              </header>
+              <div class="content">
+                <div class="inner-content">
+                  <div class="control-land">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-primary in">Trong nước</button>
+                      <button type="button" class="btn btn-primary out">Nước ngoài</button>
+                    </div>
+                  </div>
+                  
+                  <div class="wrap-list">
+                    <ul class="abroad">
+                      <?php
+                        foreach ($landScapeAbroad as $key => $value) {
+                          ?>
+                            <li>
+                              <a href="{{ route('landscape',$value->id) }}"><i class="fa fa-angle-right"></i>{{$value->city}}</a>
+                            </li>
+                          <?php
+                        }
+                      ?>
+                    </ul>
+                    <ul class="notabroad">
+                      <?php
+                        foreach ($landScapeNotAbroad as $key => $value) {
+                          ?>
+                            <li>
+                              <a href="{{ route('landscape',$value->id) }}"><i class="fa fa-angle-right"></i>{{$value->city}}</a>
+                            </li>
+                          <?php
+                        }
+                      ?>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div> <!-- .inner-tour-landscape -->
+          </div> <!-- .tour-landscape-->
+
+
         </div>
       </div>
       <div class="page-content col-md-9">
@@ -128,7 +182,7 @@
                  
                 </div> <!-- .inner-wrap-list -->
                 <div class="wrap-pagination">
-                    {!! $tours->render() !!}
+                    {!! $tours->appends(Input::except('page'))->render() !!}
                 </div>
               </div>
             </div>

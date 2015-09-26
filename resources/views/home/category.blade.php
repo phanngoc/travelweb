@@ -19,7 +19,7 @@
                     ?>
                       <li>
                         <div class="inner-item">
-                          <h4>{{$value->title}}</h4>
+                          <h4><a href="{{ route('detailpost',array('id'=>$value->id,'more'=> $value->title)) }}">{{$value->title}}</a></h4>
                           <div class="wrap-content">
                             <div class="wrap-image">
                               <img src="{{Asset('posts/'.$value->image)}}" alt="">
@@ -30,7 +30,7 @@
                           </div>
                           <div class="footer">
                               <div class="wrap-readmore">
-                                <a href="javascript:">Đọc tiếp</a>
+                                <a href="{{ route('detailpost',array('id'=>$value->id,'more'=> $value->title)) }}">Đọc tiếp</a>
                               </div>
                           </div>
                         </div>  
@@ -62,9 +62,9 @@
                         <li>
                           <div class="inner-item">
                               <div class="wrap-avatar">
-                                <a href="javascript:"><img src="{{Asset('posts/'.$value->image)}}" alt=""/></a>
+                                <a href="{{ route('detailpost',array('id'=>$value->id,'more'=> $value->title)) }}"><img src="{{ Asset('posts/'.$value->image) }}" alt=""/></a>
                               </div>
-                              <div class="title"><a href="javascript:">{{$value->title}}</a></div>
+                              <div class="title"><a href="{{ route('detailpost',array('id'=>$value->id,'more'=> $value->title)) }}">{{ $value->title }}</a></div>
                               <div class="content">
                               <?php 
                                 $pos = strpos($value->content," ",50);
@@ -79,7 +79,7 @@
                 </ul>
               </div>
             </div>
-          </div> <!-- .recent-comment-->
+          </div> <!-- .feature-post-->
           <div class="random-post">
             <div class="inner-random-post">
               <div class="wrap-head">
@@ -93,9 +93,9 @@
                         <li>
                           <div class="inner-item">
                               <div class="wrap-avatar">
-                                <a href="javascript:"><img src="{{Asset('posts/'.$value->image)}}" alt=""/></a>
+                                <a href="{{ route('detailpost',array('id'=>$value->id,'more'=> $value->title)) }}"><img src="{{Asset('posts/'.$value->image)}}" alt=""/></a>
                               </div>
-                              <div class="title"><a href="javascript:">{{$value->title}}</a></div>
+                              <div class="title"><a href="{{ route('detailpost',array('id'=>$value->id,'more'=> $value->title)) }}">{{$value->title}}</a></div>
                               <div class="content">
                               <?php 
                                 $pos = strpos($value->content," ",50);

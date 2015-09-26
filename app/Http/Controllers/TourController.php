@@ -27,11 +27,43 @@ class TourController extends Controller
             $tours[$key]->periodNature = HomeController::periodNature($value->period);
         }
         
-        
         $destinationsData = Destination::all();
         $departuresData = Departure::all();
-        return view('home.searchtour',compact('tours','destinationsData','departuresData'));
+        $landScapeAbroad = Tour::getLandScapeAbroad();
+        $landScapeNotAbroad = Tour::getLandScapeNotAbroad();
+        return view('home.searchtour',compact('tours','destinationsData','departuresData','landScapeAbroad','landScapeNotAbroad'));
     }
+
+    /**
+     * [landscape description]
+     * @param  [type] $id [description]
+     * @return [type]     [description]
+     */
+    public function landscape($id)
+    {
+        $tours = Tour::getTourByLandScape($id);
+        foreach ($tours as $key => $value) {
+            $tours[$key]->periodNature = HomeController::periodNature($value->period);
+        }
+        $destinationsData = Destination::all();
+        $departuresData = Departure::all();
+        $landScapeAbroad = Tour::getLandScapeAbroad();
+        $landScapeNotAbroad = Tour::getLandScapeNotAbroad();
+        return view('home.searchtour',compact('tours','destinationsData','departuresData','landScapeAbroad','landScapeNotAbroad'));
+    }
+
+    /**
+     * [detailtour description]
+     * @param  [type] $id [description]
+     * @return [type]     [description]
+     */
+    public function detailtour($id)
+    {
+        $tourimages = Tour::getImageTour($id);
+        $tour = Tour::getDetailAndInfoAround($id);
+        return view('home.detailtour',compact('tourimages','tour'));
+    }
+
 
     /**
      * Show the form for creating a new resource.

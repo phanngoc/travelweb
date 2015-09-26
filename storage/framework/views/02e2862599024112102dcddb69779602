@@ -19,16 +19,16 @@
 				<nav>
 					<ul class="main-menu">
 						<li><a href="#">Trang chủ</a></li>
-						<li><a href="#">Điểm đến</a></li>
-						<li><a href="#">Âm thực</a></li>
-						<li><a href="#">Khách sạn</a></li>
+						<li><a href="<?php echo e(route('showcate',array('id'=>1,'name'=>'diem_den'))); ?>">Điểm đến</a></li>
+						<li><a href="<?php echo e(route('showcate',array('id'=>2,'name'=>'am_thuc'))); ?>">Âm thực</a></li>
+						<li><a href="<?php echo e(route('showcate',array('id'=>3,'name'=>'khach_san'))); ?>">Khách sạn</a></li>
 						<li>
-						   <a href="#">Dịch vụ</a>
+						   <a href="<?php echo e(route('showcate',array('id'=>4,'name'=>'dich_vu'))); ?>">Dịch vụ</a>
 							<ul>
-								<li><a href="#">Cafe Quán bar</a></li>
-								<li><a href="#">Thuê xe</a></li>
-								<li><a href="#">Khuyến mãi</a></li>
-								<li><a href="#">Nhà hàng</a></li>
+								<li><a href="<?php echo e(route('showcate',array('id'=>5,'name'=>'cafe_bar'))); ?>">Cafe Quán bar</a></li>
+								<li><a href="<?php echo e(route('showcate',array('id'=>6,'name'=>'thue_xe'))); ?>">Thuê xe</a></li>
+								<li><a href="<?php echo e(route('showcate',array('id'=>7,'name'=>'khuyen_mai'))); ?>">Khuyến mãi</a></li>
+								<li><a href="<?php echo e(route('showcate',array('id'=>8,'name'=>'nha_hang'))); ?>">Nhà hàng</a></li>
 							</ul>
 						</li>
 						<li><a href="#">Tour du lịch</a></li>

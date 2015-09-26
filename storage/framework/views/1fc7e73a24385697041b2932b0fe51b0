@@ -18,7 +18,7 @@
                     ?>
                       <li>
                         <div class="inner-item">
-                          <h4><?php echo e($value->title); ?></h4>
+                          <h4><a href="<?php echo e(route('detailpost',array('id'=>$value->id,'more'=> $value->title))); ?>"><?php echo e($value->title); ?></a></h4>
                           <div class="wrap-content">
                             <div class="wrap-image">
                               <img src="<?php echo e(Asset('posts/'.$value->image)); ?>" alt="">
@@ -30,7 +30,7 @@
                           </div>
                           <div class="footer">
                               <div class="wrap-readmore">
-                                <a href="javascript:">Đọc tiếp</a>
+                                <a href="<?php echo e(route('detailpost',array('id'=>$value->id,'more'=> $value->title))); ?>">Đọc tiếp</a>
                               </div>
                           </div>
                         </div>  
@@ -63,9 +63,9 @@
                         <li>
                           <div class="inner-item">
                               <div class="wrap-avatar">
-                                <a href="javascript:"><img src="<?php echo e(Asset('posts/'.$value->image)); ?>" alt=""/></a>
+                                <a href="<?php echo e(route('detailpost',array('id'=>$value->id,'more'=> $value->title))); ?>"><img src="<?php echo e(Asset('posts/'.$value->image)); ?>" alt=""/></a>
                               </div>
-                              <div class="title"><a href="javascript:"><?php echo e($value->title); ?></a></div>
+                              <div class="title"><a href="<?php echo e(route('detailpost',array('id'=>$value->id,'more'=> $value->title))); ?>"><?php echo e($value->title); ?></a></div>
                               <div class="content">
                               <?php 
                                 $pos = strpos($value->content," ",50);
@@ -80,7 +80,7 @@
                 </ul>
               </div>
             </div>
-          </div> <!-- .recent-comment-->
+          </div> <!-- .feature-post-->
           <div class="random-post">
             <div class="inner-random-post">
               <div class="wrap-head">
@@ -94,9 +94,9 @@
                         <li>
                           <div class="inner-item">
                               <div class="wrap-avatar">
-                                <a href="javascript:"><img src="<?php echo e(Asset('posts/'.$value->image)); ?>" alt=""/></a>
+                                <a href="<?php echo e(route('detailpost',array('id'=>$value->id,'more'=> $value->title))); ?>"><img src="<?php echo e(Asset('posts/'.$value->image)); ?>" alt=""/></a>
                               </div>
-                              <div class="title"><a href="javascript:"><?php echo e($value->title); ?></a></div>
+                              <div class="title"><a href="<?php echo e(route('detailpost',array('id'=>$value->id,'more'=> $value->title))); ?>"><?php echo e($value->title); ?></a></div>
                               <div class="content">
                               <?php 
                                 $pos = strpos($value->content," ",50);
